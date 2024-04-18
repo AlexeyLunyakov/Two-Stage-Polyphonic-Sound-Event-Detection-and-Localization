@@ -80,9 +80,9 @@ III. evaluataion:
 The model used is based on CRNN with 9 layers of CNN and 1 layer of RNN. 
 
 
-Originaly in 2019 the training of mini-batch size of 32 takes 210ms / batch on a single GTX 1080 Ti GPU. 
-In 2024 the training of mini-batch size of 32 takes 56ms / batch on a single RTX4070 Ti GPU.
-If you have GPU memory error, try to reduce the batch size. 
+* Originaly in 2019 the training of mini-batch size of 32 takes 210ms / batch on a single GTX 1080 Ti GPU. 
+* In 2024 the training of mini-batch size of 32 takes 56ms / batch on a single RTX4070 Ti GPU.
+* If you have GPU memory error, try to reduce the batch size. 
 
 
 The training looks like:
