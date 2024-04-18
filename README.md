@@ -54,7 +54,7 @@ dataset_root
 
 ### 1. Requirements
 
-python 3.6 + pytorch 1.0
+python >= 3.9 + pytorch >= 1.8
 
 ### 2. Run the codes
 
