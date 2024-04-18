@@ -106,7 +106,6 @@ Train ER: 0.038,  Train F-score: 0.981,  Train DOA error: 78.443,  Train DOA fra
 Valid ER: 0.159,  Valid F-score: 0.910,  Valid DOA error: 79.015,  Valid DOA frame recall: 0.872,  Valid SELD error: 0.204
 Iters: 40000,  Epochs/Batches: 36/1048,  Train time: 11.333s,  Eval time: 22.134s
 ----------------------------------------------------------------------------------------------------------------------------------------------
-Checkpoint saved to E:\\Work\\Vulcan\\SED\\TSP-SED\\appendixes\models_saved\sed_only\model_CRNN10_mic_fold_1_seed_10\iter_40000.pth
 </pre>
 
 For DOA
