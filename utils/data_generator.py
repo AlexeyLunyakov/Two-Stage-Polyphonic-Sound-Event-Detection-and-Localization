@@ -187,8 +187,8 @@ class DataGenerator(object):
         target_dist = np.zeros((frame_num, self.class_num))
         
         for n in range(len(event)):
-            start_idx = np.int(np.round(start_time[n] * self.fs//self.hopsize)) ##### consider it further about this round!!!
-            end_idx = np.int(np.round(end_time[n] * self.fs//self.hopsize))
+            start_idx = int(np.round(start_time[n] * self.fs//self.hopsize)) ##### consider it further about this round!!!
+            end_idx = int(np.round(end_time[n] * self.fs//self.hopsize))
             class_idx = lb_to_ix[event[n]]
             target_event[start_idx:end_idx, class_idx] = 1.0
             target_ele[start_idx:end_idx, class_idx] = elevation[n] * np.pi / 180.0

@@ -6,7 +6,8 @@ import os
 import numpy as np
 import scipy.io.wavfile as wav
 from sklearn import preprocessing
-from sklearn.externals import joblib
+# from sklearn.externals import joblib
+import joblib
 from IPython import embed
 import matplotlib.pyplot as plot
 import librosa
@@ -47,7 +48,7 @@ class FeatureClass:
         self._nfft = self._next_greater_power_of_2(self._win_len)
 
         self._dataset = dataset
-        self._eps = np.spacing(np.float(1e-16))
+        self._eps = np.spacing(float(1e-16))
         self._nb_channels = 4
 
         # Sound event classes dictionary # DCASE 2016 Task 2 sound events

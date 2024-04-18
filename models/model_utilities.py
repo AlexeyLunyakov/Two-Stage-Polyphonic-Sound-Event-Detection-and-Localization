@@ -18,7 +18,8 @@ def interpolate(x, ratio):
         out: (batch_size, time_steps*ratio, class_num) 
     '''
     (batch_size, time_steps, classes_num) = x.shape
-    upsampled = x[:, :, None, :].repeat(ratio, axis=2)
+    # upsampled = x[:, :, None, :].repeat(ratio, axis=2) # original line 
+    upsampled = torch.repeat_interleave(x[:, :, None, :], ratio, dim=2) # modif line
     upsampled = upsampled.reshape(batch_size, time_steps * ratio, classes_num)
     
     return upsampled

@@ -123,7 +123,8 @@ def evaluate(data_generator, data_type, max_audio_num, task_type, model, cuda, l
     doa_pred = np.concatenate(doa_pred, axis=0)
 
     ###################### SED and DOA metrics, for submission method evaluation ######################
-    gt_meta_dir = '/vol/vssp/AP_datasets/audio/dcase2019/task3/dataset_root/metadata_dev/'
+    # gt_meta_dir = '/vol/vssp/AP_datasets/audio/dcase2019/task3/dataset_root/metadata_dev/'
+    gt_meta_dir = './dataset_root/metadata_dev/'
     sed_scores, doa_er_metric, seld_metric = calculate_SELD_metrics(gt_meta_dir, submissions_dir, score_type='all')
     ###################################################################################################
 

@@ -58,25 +58,19 @@ python 3.6 + pytorch 1.0
 
 ### 2. Run the codes
 
-I. Set the directories:
-
-```shell
-./0_directories.sh
-```
-
-II. Extract features:
+I. Extract features:
 
 ```shell
 ./1_extract_features.sh
 ```
 
-III. train a model:
+II. train a model:
 
 ```shell
 ./2_train.sh
 ```
 
-IV. evaluataion:
+III. evaluataion:
 
 ```shell
 ./3_evaluation.sh
@@ -97,7 +91,7 @@ Number of GPU available: 1
 
 Total number of parameters: 5890977
 
-Loading training data time: 82.711 s.
+Loading training data time: 3.607 s.
 
 Training audios number: 34624
 
@@ -105,21 +99,14 @@ Cross-Validation audios number: 100
 
 Testing audios number: 100
 
+--------------------------------------------------------------
+Train SELD loss: 0.010,  Train SED loss: 0.010,  Train DOA loss: 2.724,  Train SED mAP(micro): 0.924,  Train SED mAP(macro): 0.904
+Valid SELD loss: 0.048,  Valid SED loss: 0.048,  Valid DOA loss: 2.887,  Valid SED mAP(micro): 0.825,  Valid SED mAP(macro): 0.773
+Train ER: 0.038,  Train F-score: 0.981,  Train DOA error: 78.443,  Train DOA frame recall: 0.936,  Train SELD error: 0.139
+Valid ER: 0.159,  Valid F-score: 0.910,  Valid DOA error: 79.015,  Valid DOA frame recall: 0.872,  Valid SELD error: 0.204
+Iters: 40000,  Epochs/Batches: 36/1048,  Train time: 11.333s,  Eval time: 22.134s
 ----------------------------------------------------------------------------------------------------------------------------------------------
-Train SELD loss: 0.010,  Train SED loss: 0.010,  Train DOA loss: 2.725,  Train SED mAP(micro): 0.926,  Train SED mAP(macro): 0.903
-Valid SELD loss: 0.045,  Valid SED loss: 0.045,  Valid DOA loss: 2.659,  Valid SED mAP(micro): 0.845,  Valid SED mAP(macro): 0.790
-Train ER: 0.031,  Train F-score: 0.984,  Train DOA error: 80.386,  Train DOA frame recall: 0.927,  Train SELD error: 0.142
-Valid ER: 0.144,  Valid F-score: 0.920,  Valid DOA error: 78.376,  Valid DOA frame recall: 0.864,  Valid SELD error: 0.199
-Iters: 52000,  Epochs/Batches: 48/64,  Train time: 42.015s,  Eval time: 47.036s
-----------------------------------------------------------------------------------------------------------------------------------------------
-Checkpoint saved to /vol/vssp/msos/YinC/workspace/DCASE2019/task3/mycode_v11/appendixes/models_saved/sed_only/model_CRNN10_mic_fold_1_seed_10/iter_52000.pth
-----------------------------------------------------------------------------------------------------------------------------------------------
-Train SELD loss: 0.010,  Train SED loss: 0.010,  Train DOA loss: 2.720,  Train SED mAP(micro): 0.927,  Train SED mAP(macro): 0.908
-Valid SELD loss: 0.047,  Valid SED loss: 0.047,  Valid DOA loss: 2.596,  Valid SED mAP(micro): 0.836,  Valid SED mAP(macro): 0.792
-Train ER: 0.035,  Train F-score: 0.982,  Train DOA error: 79.983,  Train DOA frame recall: 0.929,  Train SELD error: 0.142
-Valid ER: 0.144,  Valid F-score: 0.918,  Valid DOA error: 77.175,  Valid DOA frame recall: 0.869,  Valid SELD error: 0.196
-Iters: 52200,  Epochs/Batches: 48/264,  Train time: 43.011s,  Eval time: 46.227s
-----------------------------------------------------------------------------------------------------------------------------------------------
+Checkpoint saved to E:\\Work\\Vulcan\\SED\\TSP-SED\\appendixes\models_saved\sed_only\model_CRNN10_mic_fold_1_seed_10\iter_40000.pth
 </pre>
 
 For DOA

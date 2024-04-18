@@ -1,0 +1,1 @@
+Place the folders with dataset files in this directory and remove this README file

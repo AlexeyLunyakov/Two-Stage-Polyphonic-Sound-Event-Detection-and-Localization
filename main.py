@@ -6,7 +6,7 @@ import random
 import shutil
 import sys
 from timeit import default_timer as timer
-
+import joblib
 import numpy as np
 import torch
 import torch.nn as nn
@@ -90,7 +90,7 @@ def train(args, data_generator, model, optimizer, logging):
         ################
         ## Validation
         ################
-        if batch_idx % 200 == 0:
+        if batch_idx % 1000 == 0:
 
             valid_begin_time = timer()
             train_time = valid_begin_time - train_begin_time
@@ -297,7 +297,8 @@ def inference_all_fold(args):
         'model_' + args.model  + '_{}'.format(args.audio_type) + \
             '_seed_{}'.format(args.seed), 'test')    
 
-    gt_meta_dir = '/vol/vssp/AP_datasets/audio/dcase2019/task3/dataset_root/metadata_dev/'
+    # gt_meta_dir = '/vol/vssp/AP_datasets/audio/dcase2019/task3/dataset_root/metadata_dev/'
+    gt_meta_dir = './dataset_root/metadata_dev/'
     sed_scores, doa_er_metric, seld_metric = evaluation.calculate_SELD_metrics(gt_meta_dir, test_submissions_dir, score_type='all')
 
     loss = [0.0, 0.0, 0.0]
